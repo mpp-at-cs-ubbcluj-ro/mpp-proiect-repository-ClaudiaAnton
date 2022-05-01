@@ -1,0 +1,46 @@
+syntax="proto3";
+package chat.protocol;
+
+option java_package = "com.mpp.proto.javaFiles.chat.network.protobuffprotocol";
+option java_outer_classname = "ChatProtobufs";
+
+message Arbitru{
+  string id=1;
+  string nume=2;
+  string username=3;
+  string parola=4;
+  string proba=5;
+}
+
+message Rezultat{
+  string probaID=1;
+  string participantID=2;
+  string punctaj=3;
+  string id=4;
+}
+message ChatRequest {
+  enum Type {Unkown=0; Login = 1; Logout = 2; SendMessage = 3; GetLoggedFriends=4 ;}
+
+  // Identifies which request is filled in.
+  Type type = 1;
+
+  // One of the following will be filled in, depending on the type.
+  oneof payload{
+    Arbitru user = 2;
+    Rezultat message = 3;
+  }
+}
+
+message ChatResponse{
+  enum Type { Unknown=0; Ok = 1; Error = 2; GetLoggedFriends=3; FriendLoggedIn = 4; FriendLoggedOut=5; NewMessage=6;  }
+
+  // Identifies which request is filled in.
+  Type type = 1;
+
+  // One of the following will be filled in, depending on the type.
+  string error = 2;
+  repeated Arbitru friends=3;
+  Arbitru user=4 ;
+  Rezultat message = 5;
+
+}

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mpp.controller.MainController">
+   <children>
+      <TableView fx:id="table" layoutX="43.0" layoutY="57.0" prefHeight="287.0" prefWidth="282.0">
+        <columns>
+          <TableColumn fx:id="numeTabel" prefWidth="140.0" text="Nume" />
+          <TableColumn fx:id="punctajTabel" prefWidth="140.0" text="Punctaj" />
+        </columns>
+      </TableView>
+      <TextField fx:id="punctaj" layoutX="386.0" layoutY="107.0" />
+      <Button layoutX="436.0" layoutY="175.0" mnemonicParsing="false" onMouseClicked="#addPoints" text="Adauga" />
+      <Button fx:id="raportButtom" layoutX="439.0" layoutY="236.0" mnemonicParsing="false" onMouseClicked="#raport" text="Raport" />
+      <Text layoutX="386.0" layoutY="97.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Punctaj" />
+      <Label fx:id="arbitru" layoutX="43.0" layoutY="24.0" text="Label" />
+      <Label fx:id="proba" layoutX="85.0" layoutY="24.0" text="Label" />
+      <Button  layoutX="439.0" layoutY="298.0" mnemonicParsing="false" onMouseClicked="#logOutClick" text="LogOut" />
+   </children>
+</AnchorPane>

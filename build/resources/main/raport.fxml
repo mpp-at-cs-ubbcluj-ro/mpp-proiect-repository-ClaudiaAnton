@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="402.0" prefWidth="450.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mpp.controller.RaportController">
+   <children>
+      <TableView fx:id="table" layoutX="75.0" layoutY="48.0" prefHeight="241.0" prefWidth="300.0">
+        <columns>
+          <TableColumn fx:id="numeTabel" prefWidth="150.0" text="Nume" />
+          <TableColumn fx:id="punctajTabel" prefWidth="150.0" text="Punctaj" />
+        </columns>
+      </TableView>
+      <Button fx:id="back" layoutX="198.0" layoutY="335.0" mnemonicParsing="false" onMouseClicked="#backButton" text="Back" />
+   </children>
+</AnchorPane>
